@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Presente para Andriellen</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+  html, body{
+  width:100%;
+  overflow-x:hidden;
+
+  section{
+
+  overflow:hidden;
+
+  }
+}
+
+body{
+  overflow-x:hidden;
+  overflow-y:auto;
+
+  font-family:'Pacifico', cursive;
+
+  background:white;
+}
+  
+    #inicio{
+      width:100%;
+      min-height:100vh;
+
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      gap:30px;
+
+      background-image:url('assets/fundo1.png');
+      background-size:100% 100%;
+      background-position:center;
+
+      color:rgb(111, 23, 110);
+      text-align:center;
+
+      padding:20px;
+    }
+
+    .carta{
+
+  animation: flutuar 2s infinite ease-in-out;
+
+  width:300px;
+  cursor:pointer;
+  transition:0.5s;
+
+}
+
+#btn1, #btn2, #btn3{
+  animation: flutuar 2s infinite ease-in-out;
+  border:none;
+  background:none;
+}
+
+.botoes img:hover{
+  transform:scale(1.1);
+  transition:0.3s;
+}
+
+@keyframes flutuar{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+    .carta:hover{
+      transform:scale(1.05);
+    }
+
+    #inicio h1{
+      font-size:3rem;
+    }
+
+    #inicio h2{
+      font-family:'Poppins', sans-serif;
+      letter-spacing:5px;
+      font-size:1rem;
+      color:#371338b0;
+}
+    
+
+    #inicio button{
+      padding:15px 40px;
+      border:none;
+      border-radius:50px;
+
+      font-size:1rem;
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    #inicio button:hover{
+      transform:scale(1.08);
+    }
+
+
+    #historia{
+
+      overflow:hidden;
+    
+      display:none;
+
+      width:100%;
+      min-height:100vh;
+
+      position:relative;
+
+      background-image:url('assets/fundo1.png');
+      background-size:100% 100%;
+      background-position:center;
+
+      flex-direction:column;
+      align-items:center;
+
+      gap:40px;
+
+      padding:80px 20px;
+
+      background-image:url('fundoroxo.jpg');
+      background-size:100% 100%;
+      background-position:center;
+      
+
+      color:rgb(0, 0, 0);
+      text-align:center;
+       
+      padding-left:70px;
+      padding-right:70px;
+      
+
+    }
+    
+
+    #historia h1{
+      font-size:4rem;
+    }
+
+    #historia p{
+      max-width:800px;
+      line-height:1.8;
+      font-size:1.2rem;
+    }
+
+    
+    .galeria{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .galeria img{
+      width:250px;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .galeria img:hover{
+      transform:scale(1.03);
+    }
+
+    .botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+     gap:20px;
+
+  margin-top:30px;
+
+}
+
+.botoes img{
+
+  width:150px;
+
+  cursor:pointer;
+
+}
+
+    @media(max-width:768px){
+
+      #inicio h1{
+        font-size:2rem;
+      }
+
+      #historia h1{
+        font-size:2.5rem;
+      }
+
+      #historia p{
+        font-size:1rem;
+      }
+
+      .carta{
+        width:220px;
+      }
+
+      .galeria img{
+        width:180px;
+      }
+
+    }
+
+    .bloco img{
+
+  animation: flutuar 3s infinite ease-in-out;
+
+  width:90%;
+  max-width:320px;
+  height:auto;
+   }
+
+   @keyframes flutuar{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+   .abrindo{
+
+  animation: abrirCarta 1s forwards;
+
+}
+
+@keyframes abrirCarta{
+
+  0%{
+    transform:scale(1) rotate(0deg);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(2) rotate(10deg);
+    opacity:0;
+  }
+
+} 
+ 
+  .sumindo{
+
+  animation: sumirTela 1s forwards;
+
+}
+
+@keyframes sumirTela{
+
+  0%{
+    opacity:1;
+  }
+
+  100%{
+    opacity:0;
+  }
+
+} 
+
+   #dancando{
+
+  animation: dancar 2s infinite ease-in-out !important;
+
+}
+
+  @keyframes dancar{
+
+  0%{
+    transform:
+    translateY(0px)
+    rotate(0deg)
+    scale(1);
+  }
+
+  25%{
+    transform:
+    translateY(-15px)
+    rotate(10deg)
+    scale(1.08);
+  }
+
+  50%{
+    transform:
+    translateY(0px)
+    rotate(0deg)
+    scale(1);
+  }
+
+  75%{
+    transform:
+    translateY(-15px)
+    rotate(-10deg)
+    scale(1.08);
+  }
+
+  100%{
+    transform:
+    translateY(0px)
+    rotate(0deg)
+    scale(1);
+  }
+
+} 
+
+  #pagina3,
+  #pagina4,
+  #pagina5{
+
+ 
+  display:none;
+
+  width:100%;
+
+  min-height:100vh;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-direction:column;
+
+  position:relative;
+
+}
+
+  #voltar3,
+  #voltar4,
+  #voltar5{
+
+ margin-top:40px;
+
+  padding:15px 40px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:linear-gradient(45deg, #d578da, #d59cff);
+
+  color:rgb(0, 0, 0);
+
+  font-size:1.1rem;
+
+  font-family:'Pacifico', serif;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+
+  position:relative;
+
+  z-index:9999;
+
+
+}
+
+  #voltar3:hover,
+  #voltar4:hover,
+  #voltar5:hover{
+
+  transform:scale(1.08);
+
+  box-shadow:0 0 25px rgba(255,255,255,0.5);
+
+}
+
+  #historia .titulo-aniversario{
+
+  font-size:2rem !important;
+
+  line-height:2.5rem;
+
+  padding:0 10px;
+
+  font-family:'Cinzel', serif !important;
+  font-size: 4rem !important;
+  color: #371338b0;
+
+  background: linear-gradient(90deg, #ff4ecd, #7b5cff, #00d4ff);
+
+  background: linear-gradient(90deg, #ff4ecd, #7b5cff, #00d4ff);
+ 
+  background-clip: text;
+-webkit-background-clip: text;
+
+color: transparent;
+-webkit-text-fill-color: transparent;
+
+}
+
+  #pagina3{
+
+  background-image:url('f3p3.jpg');
+
+background-size:100% 100%;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
+
+}
+
+  #pagina4{
+
+  background-image:url('fundo4.jpg');
+
+background-size:100% 100%;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
+}
+
+  #pagina5{
+
+  background-image:url('fundoteste.jpg');
+
+background-size:100% 100%;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
+}
+
+
+
+  video{
+
+  width:500px;
+
+  border-radius:20px;
+
+  margin-top:30px;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+}
+.adesivo-p2,
+.adesivo-p4,
+.adesivo-p5{
+
+  width:70px !important;
+}
+
+.adesivo1{ animation-delay:0s; }
+.adesivo2{ animation-delay:0.3s; }
+.adesivo3{ animation-delay:0.6s; }
+.adesivo4{ animation-delay:0.9s; }
+
+  .adesivo:hover{
+  transform:scale(1.1) rotate(5deg);
+}
+
+  .adesivo1{
+  top:80px;
+  left:60px;
+}
+
+.adesivo2{
+  top:170px;
+  right:60px;
+}
+
+.adesivo3{
+  bottom:120px;
+  left:200px;
+}
+
+.adesivo4{
+  bottom:80px;
+  right:150px;
+}
+
+@keyframes dancarAdesivo{
+
+  0%{
+    transform:translateY(0px) rotate(0deg);
+  }
+
+  50%{
+    transform:translateY(-12px) rotate(6deg);
+  }
+
+  100%{
+    transform:translateY(0px) rotate(0deg);
+  }
+
+}
+
+  .adesivo-p2{
+  position:absolute;
+  width:200px;
+  animation:dancarAdesivo 3s infinite ease-in-out;
+}
+
+.p2-1{ top:5%; left:3%; }
+.p2-2{ top:18%; right:5%; }
+.p2-3{ top:38%; left:8%; }
+.p2-4{ top:55%; right:12%; }
+.p2-5{ top:72%; left:5%; }
+.p2-6{ top:85%; right:8%; }
+.p2-7{ top:48%; left:75%; }
+.p2-8{ top:25%; left:45%; }
+
+.p4-1{ top:8%; left:4%; }
+.p4-2{ top:30%; right:6%; }
+.p4-3{ top:60%; left:10%; }
+.p4-4{ top:82%; right:12%; }
+
+.area-letra{
+
+  position:relative;
+
+  width:100%;
+
+  max-width:800px;
+
+  margin-top:40px;
+
+  padding:20px;
+
+}
+
+.linha{
+
+  font-size:2rem;
+
+  margin:40px 0;
+
+  color:rgb(0, 0, 0);
+
+  text-align:center;
+
+}
+
+#gatinho{
+
+  position:absolute;
+
+  width:45px;
+
+  left:-55px;
+
+  transition:0.35s linear;
+
+  z-index:10;
+
+  animation:dancar 1s infinite ease-in-out;
+
+}
+
+.ativa{
+
+  transform:scale(1.15);
+
+  color:#452047;
+
+  text-shadow:
+  0 0 10px #ee9cfb,
+  0 0 20px #ed2b99;
+
+  transition:0.4s;
+
+}
+
+#pagina5{
+
+  background-image:url('f5paginaa.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
+
+}
+
+#pagina5 video,
+#pagina5 .area-letra,
+#pagina5 h3,
+#pagina5 #voltar5{
+
+  position:relative;
+  z-index:2;
+
+}
+
+.adesivo-p5{
+
+  position:absolute;
+  width:280px;
+
+  animation:dancarAdesivo 3s infinite ease-in-out;
+}
+
+.p5-1{ top:6%; left:4%; }
+.p5-2{ top:20%; right:6%; }
+.p5-3{ top:38%; left:12%; }
+.p5-4{ top:52%; right:10%; }
+.p5-5{ top:70%; left:6%; }
+.p5-6{ top:84%; right:8%; }
+.p5-7{ top:45%; left:78%; }
+
+
+.idol{
+
+  width:90%;
+
+  max-width:1000px;
+
+  position:relative;
+}
+
+#abrirCarta{
+
+  width:45%;
+
+  max-width:650px;
+
+  position:absolute;
+
+  top:22%;
+  left:28%;
+
+  cursor:pointer;
+
+  animation:dancarAdesivo 2s infinite ease-in-out;
+
+  transition:0.3s;
+
+  z-index:1;
+
+}
+
+#abrirCarta:hover{
+
+  transform:scale(1.15);
+}
+
+#popupCarta{
+
+  display:none;
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,0.75);
+
+  z-index:9999;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-direction:column;
+
+}
+
+#popupCarta img{
+
+  max-width:1200px;;
+  height:85vh !important;
+  width:100%;
+
+  height:auto;
+
+  object-fit:contain;
+
+  image-rendering:auto;
+
+  
+
+}
+
+#fecharCarta{
+
+  position:absolute;
+
+  top:50%;
+
+  right:80px;
+
+  z-index:99999;
+
+  padding:14px 35px;
+
+  border:none;
+
+  border-radius:40px;
+
+  cursor:pointer;
+
+  font-size:1.1rem;
+
+  font-family:'Pacifico', cursive;
+
+  background:#d88cff;
+}
+
+@keyframes pularCarta{
+
+  0%{
+    transform:scale(0.8);
+    opacity:0;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+
+}
+
+.cartaContainer{
+
+  position:relative;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.cartaGrande{
+
+  width:95%;
+
+  max-width:1000px;
+
+  height:auto;
+
+   filter:brightness(45%);
+   
+
+}
+
+.textoCarta{
+
+  position:absolute;
+
+  width:60%;
+
+  font-size:1.3rem;
+
+  line-height:2.2rem;
+
+  color:white;
+
+  font-family:'Playfair Display', serif;
+
+  text-align:left;
+
+  top:18%;
+
+  left:20%;
+
+  opacity:0;
+
+  pointer-events:none;
+
+}
+
+html,
+body{
+
+  margin:0;
+  padding:0;
+
+  overflow-x:hidden;
+
+  background:black;
+
+}
+
+section{
+
+  margin:0;
+  padding-bottom:0 !important;
+
+}
+
+.mostrarTexto{
+
+  opacity:1;
+
+  animation:surgirTexto 2s steps(120);
+
+}
+
+@keyframes surgirTexto{
+
+  from{
+    clip-path:inset(0 100% 0 0);
+  }
+
+  to{
+    clip-path:inset(0 0 0 0);
+  }
+
+}
+@media screen and (max-width:768px){
+
+  html, body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+  body{
+    position:relative;
+  }
+
+  #inicio,
+  #historia,
+  #pagina3,
+  #pagina4,
+  #pagina5{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:30px 15px;
+
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center center;
+
+    overflow:hidden;
+  }
+
+  /* títulos */
+
+  #inicio h1{
+    font-size:2rem;
+    line-height:1.3;
+  }
+
+  .titulo-aniversario{
+
+  font-size:1.8rem !important;
+
+  line-height:2.3rem;
+
+  padding:0 15px;
+
+  text-align:center;
+
+}
+
+  #historia p{
+    font-size:1rem;
+    line-height:1.9rem;
+    max-width:100%;
+    padding:0 10px;
+
+    position:relative;
+    z-index:5;
+    
+  }
+
+  /* carta inicial */
+
+  .carta{
+    width:220px;
+  }
+
+  /* imagens */
+
+  .bloco img,
+  .idol,
+  .cartaGrande,
+  video{
+
+    width:90%;
+    max-width:90%;
+    height:auto;
+  }
+
+  /* BOTÕES */
+
+  .botoes{
+
+    display:flex;
+    flex-direction:row !important;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:nowrap;
+
+    gap:10px;
+
+    width:100%;
+  }
+
+  .botoes img{
+    width:80px;
+  }
+
+  /* adesivos */
+
+  .adesivo-p2,
+  .adesivo-p4,
+  .adesivo-p5{
+
+    
+  width:55px !important;
+
+  opacity:0.7;
+  }
+
+  /* REMOVE posições quebradas */
+
+  .p2-1{ top:2%; left:2%; }
+  .p2-2{ top:8%; right:2%; }
+  .p2-3{ top:20%; left:1%; }
+  .p2-4{ top:35%; right:1%; }
+  .p2-5{ top:55%; left:1%; }
+  .p2-6{ top:70%; right:2%; }
+  .p2-7{ bottom:5%; left:5%; }
+
+  .p4-1{ top:5%; left:3%; }
+  .p4-2{ top:20%; right:3%; }
+  .p4-3{ bottom:20%; left:3%; }
+  .p4-4{ bottom:5%; right:3%; }
+
+  .p5-1{ top:2%; left:2%; }
+  .p5-2{ top:10%; right:2%; }
+  .p5-3{ top:25%; left:2%; }
+  .p5-4{ top:40%; right:2%; }
+  .p5-5{ bottom:25%; left:2%; }
+  .p5-6{ bottom:10%; right:2%; }
+  .p5-7{ bottom:2%; left:35%; }
+
+  /* carta sunoo */
+
+  #abrirCarta{
+
+    width:55%;
+
+    left:22%;
+    top:35%;
+  }
+
+  .textoCarta{
+
+    width:78%;
+
+    left:11%;
+    top:12%;
+
+    font-size:0.7rem;
+
+    line-height:1.4rem;
+  }
+
+  /* letra música */
+
+  .area-letra{
+
+    width:100%;
+    padding:20px 10px;
+  }
+
+  .linha{
+
+    font-size:1.2rem;
+    line-height:2.2rem;
+
+    padding-left:30px;
+  }
+
+  #gatinho{
+    width:30px;
+  }
+
+}
+
+  /* CARTA */
+
+  #abrirCarta{
+
+    width:70%;
+
+    top:32%;
+    left:15%;
+  }
+
+  .textoCarta{
+
+    width:75%;
+
+    left:12%;
+
+    top:10%;
+
+    font-size:0.7rem;
+
+    line-height:1.2rem;
+  }
+
+  #fecharCarta{
+
+    top:20px;
+    right:20px;
+
+    padding:10px 20px;
+
+    font-size:0.9rem;
+  }
+
+  /* ADESIVOS */
+
+  .adesivo-p2,
+  .adesivo-p4,
+  .adesivo-p5{
+
+    width:65px !important;
+
+    opacity:0.85;
+  }
+
+.adesivo-p2,
+.adesivo-p4,
+.adesivo-p5{
+
+  width:60px !important;
+
+  position:relative !important;
+
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+
+  margin:8px;
+
+}
+
+@media screen and (max-width: 768px){
+
+/* impede corte lateral */
+
+html, body{
+
+  overflow-x:hidden;
+  width:100%;
+
+}
+
+/* páginas */
+
+#inicio,
+#historia,
+#pagina3,
+#pagina4,
+#pagina5{
+
+  width:100%;
+  min-height:100vh;
+
+  overflow:hidden;
+
+  padding-left:15px;
+  padding-right:15px;
+
+}
+
+/* título */
+
+.titulo-aniversario{
+
+  font-size:2rem !important;
+
+  line-height:2.5rem;
+
+  text-align:center;
+
+}
+
+/* primeira imagem */
+
+.bloco img{
+
+  width:85% !important;
+
+  max-width:320px;
+
+  height:auto;
+
+}
+
+/* textos */
+
+#historia p{
+
+  font-size:1rem;
+
+  line-height:1.8rem;
+
+  padding:0 15px;
+
+}
+
+/* adesivos */
+
+.adesivo-p2,
+.adesivo-p4,
+.adesivo-p5{
+
+  width:70px !important;
+
+}
+
+/* mantém posições corretas */
+
+.p2-1{ top:3%; left:2%; }
+.p2-2{ top:14%; right:2%; }
+.p2-3{ top:30%; left:2%; }
+.p2-4{ top:46%; right:2%; }
+.p2-5{ top:63%; left:2%; }
+.p2-6{ top:80%; right:2%; }
+.p2-7{ top:50%; left:75%; }
+
+.p4-1{ top:8%; left:2%; }
+.p4-2{ top:30%; right:2%; }
+.p4-3{ top:60%; left:2%; }
+.p4-4{ top:82%; right:2%; }
+
+.p5-1{ top:5%; left:2%; }
+.p5-2{ top:18%; right:2%; }
+.p5-3{ top:35%; left:2%; }
+.p5-4{ top:50%; right:2%; }
+.p5-5{ top:68%; left:2%; }
+.p5-6{ top:82%; right:2%; }
+.p5-7{ top:45%; left:75%; }
+
+/* botões */
+
+.botoes{
+
+  display:flex;
+
+  flex-direction:row !important;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:10px;
+
+  flex-wrap:nowrap;
+
+}
+
+.botoes img{
+
+  width:80px !important;
+
+}
+
+/* vídeo */
+
+video{
+
+  width:95% !important;
+
+  max-width:400px;
+
+}
+
+/* buquê página 3 */
+
+#abrirCarta{
+
+  width:45%;
+
+  top:55%;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+}
+
+/* carta popup */
+
+.textoCarta{
+
+  width:75%;
+
+  left:12%;
+
+  top:10%;
+
+  font-size:0.8rem;
+
+  line-height:1.5rem;
+
+}
+
+/* gatinho */
+
+#gatinho{
+
+  width:30px;
+
+  z-index:9999;
+
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+  <section id="inicio">
+
+    <img src="Envelope (1).jpg" class="carta" id="abrir"> 
+
+    <h1>
+      Chegou uma carta para você!
+    </h1>
+    <h2>Clique na carta para abri-la</h2>
+
+  </section>
+
+  <section id="historia">
+
+    <img src="sunoo6.png" class="adesivo-p2 p2-1">
+    <img src="sunoo5.png" class="adesivo-p2 p2-2">
+    <img src="sunoo7.png" class="adesivo-p2 p2-3">
+    <img src="sunoo8.png" class="adesivo-p2 p2-4">
+    <img src="sunoo 🎀-Photoroom.png" class="adesivo-p2 p2-5">
+    <img src="sunoomochi-Photoroom.png" class="adesivo-p2 p2-6">
+    <img src="pinksunoo-Photoroom.png" class="adesivo-p2 p2-7">
+
+    <h1 class="titulo-aniversario">
+      Feliz aniversário, Andriellen!
+    </h1>
+  
+     <div class="bloco esquerda">
+     <img src="fotinhaa-Photoroom.png">
+     </div>
+
+     <div class="texto">
+
+    <p>
+      Andriellen… ou melhor, Andri, como eu gosto de te chamar.
+      Hoje é o seu dia, e eu precisava te escrever algo que realmente conseguisse traduzir o quanto você é importante pra mim
+      — mesmo que nenhuma palavra seja suficiente pra isso.
+     Nossa história começou de um jeito tão simples, quase improvável… 2022, naquele RPG Jikook no Kwai. 
+    A gente entrou sem imaginar nada, só brincando, interpretando, vivendo aquelas histórias inventadas.
+   Mas o que parecia só um passatempo acabou se tornando uma das coisas mais reais que eu já vivi.
+    Entre personagens e conversas aleatórias, nasceu uma amizade que foi saindo da tela e entrando na vida de verdade.
+    </p>
+     </div>
+     </div>
+
+     <div class="bloco direita">
+
+     <div class="texto">
+
+    <p>E olha onde a gente chegou… duas pessoas que se conheceram na internet, hoje ligadas por algo que vai
+ muito além de qualquer distância. Eu aqui no Rio Grande do Norte, você no Rio Grande do Sul.
+  Estados diferentes, rotinas diferentes, vidas diferentes… mas, ainda assim, de algum jeito,
+   a gente continua próxima. E isso é tão raro, tão precioso.
+    </p>
+     </div>
+     </div>
+
+     <div class="bloco esquerda">
+     
+
+     <div class="texto">
+
+    <p>
+Andri, você se tornou uma das pessoas mais importantes pra mim. Não só pelos momentos bons, 
+pelas risadas ou pelas conversas leves, mas também por tudo aquilo que a gente compartilhou 
+quando a vida pesou. Você esteve presente mesmo estando longe, e isso tem um valor enorme.
+ Nem todo mundo fica, nem todo mundo se importa de verdade… mas você ficou.
+    </p>
+    </div>
+     </div>
+
+     <div class="bloco direita">
+
+     <div class="texto">
+
+     <p>
+Eu quero que você nunca esqueça disso: você é muito especial pra mim. E independente de qualquer fase,
+ dificuldade ou mudança que a vida colocar no caminho, eu vou estar com você. Mesmo que seja
+  só por mensagem, mesmo que seja do outro lado do país, mesmo que o mundo pareça confuso… 
+  você sempre vai ter um espaço seguro em mim.
+     </p>
+     </div>
+     </div>
+
+      <div class="bloco esquerda">
+
+     <div class="texto">
+      <p>
+Hoje, no seu aniversário, eu desejo do fundo do coração que a sua vida seja leve, bonita e 
+cheia de motivos pra sorrir. Que você encontre pessoas que te valorizem como você merece,
+ que seus sonhos não percam a força, mesmo quando parecerem difíceis, e que você nunca deixe
+  de acreditar no seu próprio valor. Que sua caminhada seja cheia de crescimento, amor,
+   paz e coisas boas que te façam sentir orgulho de quem você é.
+      </p>
+     </div>
+      </div>
+
+      <div class="bloco direita">
+
+     <div class="texto">
+       <p>
+E, acima de tudo, eu desejo que você seja feliz — de verdade, no seu tempo, do seu jeito.
+
+Feliz aniversário, Andri. Mais uma vez, eu te parabenizo por mais um ano de vida, por
+ tudo que você já viveu até aqui e por tudo que ainda vai conquistar.
+       </p>
+      </div>
+      </div>
+
+      <div class="bloco esquerda">
+     <img src="andri + celinee.png" id="dancando">
+
+     <div class="texto">
+
+        <p>
+E sobre nós… eu gosto de pensar que isso aqui não é só uma fase. Ainda temos muito caminho pela frente. 
+Muitas conversas, muitos momentos, muitas versões novas de nós mesmas pra conhecer. E eu acredito,
+ de verdade, que um dia a gente vai se encontrar. Não importa quanto tempo leve, não importa o quanto a 
+ vida mude. Um dia, a distância entre RN e RS vai virar só uma lembrança de algo que a gente conseguiu atravessar juntas.
+Porque algumas pessoas não são só passageiras… elas ficam.
+E você ficou.
+       </p>
+     </div>
+     </div>
+
+     <div class="botoes">
+  
+    <button id="btn1">
+    <img src="flores.png">
+    </button>
+
+    <button id="btn2">
+    <img src="bolinhokuromi.png">
+    </button>
+
+    <button id="btn3">
+    <img src="music.png">
+    </button>
+     </div>
+  </section>
+     
+<section id="pagina3">
+
+  <div class="area-idol">
+
+    <img src="namoradosunoo.PNG" class="idol">
+
+    <img src="floressunoo.png" id="abrirCarta">
+
+  </div>
+
+  <div id="popupCarta">
+
+  <img src="cartasunoo.png" class="cartaGrande">
+
+   <div class="textoCarta">
+
+    “Meu amor,
+
+Hoje é um dia muito especial… porque é o dia em que você nasceu.
+Sinceramente, eu acho bonito pensar que o mundo ficou um pouquinho
+ mais feliz depois que você chegou nele. Porque você tem esse jeito de iluminar 
+ tudo sem perceber. Seu sorriso, sua voz, até os pequenos detalhes seus conseguem
+  ficar na minha cabeça o dia inteiro.
+Eu queria estar ao seu lado hoje. Queria passar o aniversário com você, ouvir sua risada,
+ segurar sua mão e guardar mais um momento bonito junto de você.
+Mas acima de tudo, eu espero que hoje você se sinta muito amada. Porque você merece.
+ Merece carinho, cuidado, felicidade e todas as coisas boas que existem.
+Obrigada por existir e por deixar meus dias mais quentes e felizes só por estar neles.
+Feliz aniversário, meu amor.
+Espero continuar criando memórias lindas com você por muito tempo.
+Com carinho,
+
+ — Kim Seon Woo, seu Sunoo.
+
+    </div>
+ <button id="fecharCarta">
+    fechar
+  </button>
+
+</div>
+
+<div class="botaoVoltarContainer">
+  
+  <h3>Parabéns, Andri! Você acompanhou sua música favorita!</h3>
+   <button id="voltar3">
+    click aqui
+  </button>
+
+</div>
+
+</section>
+
+  <section id="pagina4">
+
+    <video controls width="500">
+
+    <source src="0513.mp4" type="video/mp4">
+
+  </video>
+
+   <img src="gatinho bolo.png" class="adesivo-p4 p4-1">
+   <img src="gatinhobalao.png" class="adesivo-p4 p4-2">
+  <img src="gatinhopresente.png" class="adesivo-p4 p4-3">
+  <img src="gatinhopalhaço.png" class="adesivo-p4 p4-4">
+
+  <h3>Parabéns, Andri! Você recebeu uma surpresa dos gatinhos!</h3>
+   <button id="voltar4">
+    click aqui
+  </button>
+
+  </section>
+
+<section id="pagina5">
+
+<img src="figurinha1p5.png" class="adesivo-p5 p5-1">
+<img src="figurinha2p5.png" class="adesivo-p5 p5-2">
+<img src="figurinha3p5.png" class="adesivo-p5 p5-3">
+<img src="figurinha4p5.png" class="adesivo-p5 p5-4">
+<img src="figurinha5p5.png" class="adesivo-p5 p5-5">
+<img src="figurinha6p5.png" class="adesivo-p5 p5-6">
+<img src="figurinha7p5.png" class="adesivo-p5 p5-7">
+
+  <video id="musica" controls width="500">
+
+    <source src="xo.mp4" type="video/mp4">
+
+  </video>
+
+  <div class="area-letra">
+
+    <img src="gatinhopresente.png" id="gatinho">
+
+     <div class="texto">
+    <h1>XO (Only If You Say Yes) (English ver.)</h1>
+    <h2>Letra</h2>
+      <p>
+      <div class="linha" id="linha1">
+       X-O, X-O,
+      </div>
+      <div class="linha" id="linha2">
+       Kiss me, don't say no
+      </div>
+      <div class="linha" id="linha3">
+       X-O, yeah, huh
+      </div>
+      <div class="linha" id="linha4">
+      오직 너만 줄 수 있는 허락의 말
+      </div>
+      <div class="linha" id="linha5">
+      해도 달도 따다 줄 수 있어, 말해 허락의 그 말
+      </div>
+      <div class="linha" id="linha6">
+      너의 X-O, 나의 구원, please, babe, say yes
+      </div>
+      <div class="linha" id="linha7">
+      황혼이 내릴 때, 네 모든 꿈을 이루어줄게
+      </div>
+      <div class="linha" id="linha8">
+      Please, say my name, 나 너의 지니가 되어줄게
+      </div>
+      <div class="linha" id="linha9">
+      So just say O, babe, 날 움직이는 단 하나 열쇠, yeah
+      </div>
+      <div class="linha" id="linha10">
+       나를 사용해, 내 우주의 유일한 신 그대
+      </div>
+      <div class="linha" id="linha11">
+      X-O, X-O
+      </div>
+      <div class="linha" id="linha12">
+      Kiss me, don't say no
+      </div>
+      <div class="linha" id="linha13">
+      X-O, X-O
+      </div>
+      <div class="linha" id="linha14">
+      Kiss me, don't say no
+      </div>
+      <div class="linha" id="linha15">
+      X-O, X-O
+      </div>
+      <div class="linha" id="linha16">
+      Kiss me, just say O
+      </div>
+      <div class="linha" id="linha17">
+      X-O, yeah
+      </div>
+      <div class="linha" id="linha18">
+     Can I kiss you? Can I hug you?
+      </div>
+      <div class="linha" id="linha19">
+     너에게 감사해, yeah
+      </div>
+      <div class="linha" id="linha20">
+     Would you kiss me? Would you hug me?
+      </div>
+       <div class="linha" id="linha21">
+     허락을 구할게, yeah
+      </div>
+       <div class="linha" id="linha22">
+     One and (one and) only (only) 나의 (나의) 여신 (여신)
+       </div>
+      <div class="linha" id="linha23">
+     For you (for you), I will
+      </div>
+       <div class="linha" id="linha24">
+     So just say O, babe, 저 달을 향해 날아가 볼래?
+       </div>
+       <div class="linha" id="linha25">
+     So just say O, babe, 더 멋진 차와 집이 필요해?
+       </div>
+      <div class="linha" id="linha26">
+     So just say O, babe, 날 움직이는 단 하나 열쇠, yeah
+      </div>
+       <div class="linha" id="linha27">
+     나를 사용해, 네 모든 꿈이 이루어지게
+       </div>
+      <div class="linha" id="linha28">
+     X-O, X-O
+      </div>
+      <div class="linha" id="linha29">
+     Kiss me, don't say no
+      </div>
+     <div class="linha" id="linha30">
+     X-O, X-O
+     </div>
+      <div class="linha" id="linha31">
+    Kiss mе, don't say no
+      </div>
+     <div class="linha" id="linha32">
+    X-O, X-O
+     </div>
+    <div class="linha" id="linha33">
+    Kiss me, just say O
+    </div>
+</p>
+     </div>
+     </div>
+
+  <h3>Parabéns, Andri! Você acompanhou sua música favorita!</h3>
+   <button id="voltar5">
+    click aqui
+  </button>
+
+  </section>
+  
+  <script>
+
+    const abrir = document.getElementById('abrir')
+
+    const inicio = document.getElementById('inicio')
+
+    const historia = document.getElementById('historia')
+    const btn1 = document.getElementById('btn1')
+
+    const btn2 = document.getElementById('btn2')
+    const btn3 = document.getElementById('btn3')
+    const pagina3 = document.getElementById('pagina3')
+    const pagina4 = document.getElementById('pagina4')
+    const pagina5 = document.getElementById('pagina5')
+    const voltar3 = document.getElementById('voltar3')
+    const voltar4 = document.getElementById('voltar4')
+    const voltar5 = document.getElementById('voltar5')
+
+    let posicaoHistoria = 0
+
+    abrir.addEventListener('click', () => {
+
+  // animação da carta
+  abrir.classList.add('abrindo')
+
+  // animação dos textos/tela
+  inicio.classList.add('sumindo')
+
+  // troca de tela
+  setTimeout(() => {
+
+    inicio.style.display = 'none'
+
+    historia.style.display = 'flex'
+
+    soltarConfete()
+
+  }, 1000)
+
+})
+
+
+btn1.addEventListener('click', () => {
+
+  posicaoHistoria = window.scrollY
+
+  historia.style.display = 'none'
+  pagina3.style.display = 'flex'
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+
+  soltarConfete()
+
+})
+
+btn2.addEventListener('click', () => {
+
+  posicaoHistoria = window.scrollY
+
+  historia.style.display = 'none'
+  pagina4.style.display = 'flex'
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+
+  soltarConfete()
+
+})
+
+btn3.addEventListener('click', () => {
+
+  posicaoHistoria = window.scrollY
+
+  historia.style.display = 'none'
+  pagina5.style.display = 'flex'
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  })
+
+soltarConfete()
+
+})
+
+voltar3.addEventListener('click', () => {
+
+  pagina3.style.display = 'none'
+  historia.style.display = 'flex'
+
+  // volta pro topo da página 3
+  pagina3.scrollTop = 0
+
+  window.scrollTo(0, posicaoHistoria)
+
+})
+
+voltar4.addEventListener('click', () => {
+
+  // reinicia vídeo
+  const video4 = pagina4.querySelector('video')
+
+  video4.pause()
+  video4.currentTime = 0
+
+  pagina4.style.display = 'none'
+  historia.style.display = 'flex'
+
+  // volta pro topo
+  pagina4.scrollTop = 0
+
+  window.scrollTo(0, posicaoHistoria)
+
+})
+
+voltar5.addEventListener('click', () => {
+
+  // reinicia música/vídeo
+  musica.pause()
+  musica.currentTime = 0
+
+  // reinicia gatinho
+  gatinho.style.opacity = '0'
+  gatinho.style.left = '-80px'
+  gatinho.style.top = '0px'
+
+  // remove frases ativas
+  document
+    .querySelectorAll('.linha')
+    .forEach(linha => {
+
+      linha.classList.remove('ativa')
+
+    })
+
+  pagina5.style.display = 'none'
+  historia.style.display = 'flex'
+
+  // volta pro topo
+  pagina5.scrollTop = 0
+
+  window.scrollTo(0, posicaoHistoria)
+
+})
+
+
+const musica = document.getElementById('musica')
+const gatinho = document.getElementById('gatinho')
+
+musica.addEventListener('timeupdate', () => {
+
+  const tempo = musica.currentTime
+
+  // escondido até 50s
+  if(tempo < 50){
+
+    gatinho.style.opacity = '0'
+
+  } else {
+
+    gatinho.style.opacity = '1'
+
+  }
+
+  // linha 1
+  if(tempo >= 50 && tempo < 55){
+    moverGatinho('linha1')
+  }
+
+  // linha 2
+  if(tempo >= 55 && tempo < 60){
+    moverGatinho('linha2')
+  }
+
+  // linha 3
+  if(tempo >= 60 && tempo < 63){
+    moverGatinho('linha3')
+  }
+
+  // linha 4
+  if(tempo >= 63 && tempo < 66){
+    moverGatinho('linha4')
+  }
+
+  // linha 5
+  if(tempo >= 66 && tempo < 71){
+    moverGatinho('linha5')
+  }
+
+  // linha 6
+  if(tempo >= 71 && tempo < 80){
+    moverGatinho('linha6')
+  }
+
+  // linha 7
+  if(tempo >= 80 && tempo < 85){
+    moverGatinho('linha7')
+  }
+
+  // linha 8
+  if(tempo >= 85 && tempo < 89){
+    moverGatinho('linha8')
+  }
+
+  // linha 9
+  if(tempo >= 91 && tempo < 95){
+    moverGatinho('linha9')
+  }
+
+  // linha 10
+  if(tempo >= 95 && tempo < 100){
+    moverGatinho('linha10')
+  }
+
+  // linha 11
+  if(tempo >= 100 && tempo < 105){
+    moverGatinho('linha11')
+  }
+
+  // linha 12
+  if(tempo >= 105 && tempo < 124){
+    moverGatinho('linha12')
+  }
+
+  // linha 13
+  if(tempo >= 124 && tempo < 133){
+    moverGatinho('linha13')
+  }
+
+  // linha 14
+  if(tempo >= 133 && tempo < 138){
+    moverGatinho('linha14')
+  }
+
+  // linha 15
+  if(tempo >= 138 && tempo < 145){
+    moverGatinho('linha15')
+  }
+
+  // linha 16
+  if(tempo >= 143 && tempo < 146){
+    moverGatinho('linha16')
+  }
+
+  // linha 17
+  if(tempo >= 146 && tempo < 149){
+    moverGatinho('linha17')
+  }
+
+  // linha 18
+  if(tempo >= 149 && tempo < 153){
+    moverGatinho('linha18')
+  }
+
+  // linha 19
+  if(tempo >= 153 && tempo < 156){
+    moverGatinho('linha19')
+  }
+
+  // linha 20
+  if(tempo >= 154 && tempo < 157){
+    moverGatinho('linha20')
+  }
+
+  // linha 21
+  if(tempo >= 157 && tempo < 159){
+    moverGatinho('linha21')
+  }
+
+  // linha 22
+  if(tempo >= 159 && tempo < 164){
+    moverGatinho('linha22')
+  }
+
+  // linha 23
+  if(tempo >= 164 && tempo < 168){
+    moverGatinho('linha23')
+  }
+
+  // linha 24
+  if(tempo >= 167 && tempo < 173){
+    moverGatinho('linha24')
+  }
+
+  // linha 25
+  if(tempo >= 173 && tempo < 178){
+    moverGatinho('linha25')
+  }
+
+  // linha 26
+  if(tempo >= 178 && tempo < 184){
+    moverGatinho('linha26')
+  }
+
+  // linha 27
+  if(tempo >= 184 && tempo < 188){
+    moverGatinho('linha27')
+  }
+
+  // linha 28
+  if(tempo >= 188 && tempo < 192){
+    moverGatinho('linha28')
+  }
+
+  // linha 29
+  if(tempo >= 192 && tempo < 197){
+    moverGatinho('linha29')
+  }
+
+  // linha 30
+  if(tempo >= 197 && tempo < 204){
+    moverGatinho('linha30')
+  }
+
+  // linha 31
+  if(tempo >= 204 && tempo < 208){
+    moverGatinho('linha31')
+  }
+
+  // linha 32
+  if(tempo >= 208 && tempo < 212){
+    moverGatinho('linha32')
+  }
+
+  // linha 33
+  if(tempo >= 212 && tempo < 216){
+    moverGatinho('linha33')
+  }
+
+  // some no final
+  if(tempo >= 216){
+
+    gatinho.style.opacity = '0'
+
+  }
+
+})
+
+function moverGatinho(idLinha){
+
+  const linha = document.getElementById(idLinha)
+
+  const rectLinha = linha.getBoundingClientRect()
+
+  const rectArea =
+    document.querySelector('.area-letra')
+    .getBoundingClientRect()
+
+  gatinho.style.top =
+    (rectLinha.top - rectArea.top - 5) + 'px'
+
+  gatinho.style.left =
+    (rectLinha.left - rectArea.left - 45) + 'px'
+
+}
+
+function moverGatinho(idLinha){
+
+  // remove destaque anterior
+  document
+    .querySelectorAll('.linha')
+    .forEach(linha => {
+
+      linha.classList.remove('ativa')
+
+    })
+
+  // pega linha atual
+  const linha =
+    document.getElementById(idLinha)
+
+  // adiciona destaque
+  linha.classList.add('ativa')
+
+  // move gatinho
+  gatinho.style.top =
+    linha.offsetTop + 'px'
+
+  gatinho.style.left =
+    (linha.offsetLeft - 45) + 'px'
+
+    linha.scrollIntoView({
+
+  behavior:'smooth',
+
+  block:'center'
+
+})
+}
+
+// reinicia sozinho
+musica.addEventListener('ended', () => {
+
+  musica.currentTime = 0
+
+  musica.play()
+
+  gatinho.style.left = '-80px'
+
+  gatinho.style.top = '0px'
+
+})
+
+function soltarConfete(){
+
+  // SOM
+  const som = new Audio('confete.mp3')
+
+  som.volume = 0.7
+
+  som.play()
+
+  // CONFETE NORMAL
+  confetti({
+
+    particleCount:250,
+    spread:180,
+    startVelocity:70,
+    scalar:1.3,
+
+    origin:{
+      x:0.5,
+      y:0.5
+    }
+
+  })
+
+  // BALÕES + FESTA
+  confetti({
+
+    particleCount:80,
+
+    spread:120,
+
+    scalar:2,
+
+    ticks:250,
+
+    shapes:['text'],
+
+    shapeOptions:{
+
+      text:[
+        '🎈',
+        '🎉',
+        '💖',
+        '✨',
+        '🎀'
+      ]
+
+    },
+
+    origin:{
+      x:0.5,
+      y:0.4
+    }
+
+  })
+
+  // ESTRELAS
+  confetti({
+
+    particleCount:60,
+
+    spread:360,
+
+    scalar:1.8,
+
+    shapes:['star'],
+
+    origin:{
+      x:0.5,
+      y:0.5
+    }
+
+  })
+
+}
+
+const abrirCarta =
+document.getElementById('abrirCarta')
+
+const popupCarta =
+document.getElementById('popupCarta')
+
+const fecharCarta =
+document.getElementById('fecharCarta')
+
+abrirCarta.addEventListener('click', () => {
+
+  popupCarta.style.display = 'flex'
+
+})
+
+const textoCarta =
+document.querySelector('.textoCarta')
+
+const cartaGrande =
+document.querySelector('.cartaGrande')
+
+abrirCarta.addEventListener('click', () => {
+
+popupCarta.style.display = 'flex'
+popupCarta.style.pointerEvents = 'all'
+
+})
+
+cartaGrande.addEventListener('click', () => {
+
+  textoCarta.classList.add('mostrarTexto')
+
+})
+
+fecharCarta.addEventListener('click', () => {
+
+popupCarta.style.display = 'none'
+popupCarta.style.pointerEvents = 'none'
+
+  textoCarta.classList.remove('mostrarTexto')
+
+})
+  </script>
+
+</body>
+</html>
